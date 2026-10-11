@@ -1,0 +1,16 @@
+# What each repository is reviewed for.
+#
+# One table for each repository. The key is "owner/name" for a repository
+# on GitHub, or "forge:owner/name". `policies` lists policy ids from the
+# reviewers' manifests. `processes` lists processes declared in
+# pace-layers.toml.
+#
+#   [repository."example-org/example"]
+#   policies = []
+#   processes = ["security-stocktake"]
+#
+# A repository that is not listed here is reviewed for nothing. When this
+# file is deployed, any repository the server has a declaration for and
+# this file leaves out has that declaration emptied.
+#
+# No repository is declared.
