@@ -1,0 +1,21 @@
+# Which review processes run, and when.
+#
+# A process is declared once and held by a layer that names it. A layer's
+# cadence is "event" for work that starts when a pull request changes, or
+# a clock cadence such as "weekly".
+#
+# The pull request layer holds two processes. The first judges a pull
+# request against the policies its repository is declared for in
+# declarations.toml. The second reads the conversation once the pull
+# request is closed.
+
+[process.evaluate-pull-request]
+subject = "pull request"
+judges = true
+
+[process.collect-at-close]
+subject = "pull request"
+
+[layer.pull-request]
+cadence = "event"
+processes = ["evaluate-pull-request", "collect-at-close"]
