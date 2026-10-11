@@ -49,7 +49,7 @@ sentence complies. A long sentence is not a garden path.
 Quote the sentence, copied exactly. A quote that is not in a commit
 message is discarded. Report each sentence once.
 
-Report the grade named:
+Report one of these grades:
 - warn: the reader forms the wrong phrase and recovers. The rest of the
 sentence leaves one reading, and a second pass reaches it.
 - fail: the sentence has two complete readings and nothing in it says

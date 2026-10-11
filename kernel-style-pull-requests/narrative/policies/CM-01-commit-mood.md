@@ -1,6 +1,6 @@
 policy_id: CM-01
 subject: commit summary
-summary: Every commit summary reads as an instruction to the code
+summary: Each commit summary is in the imperative mood
 model_class: large
 evidence: commits
 quotable_name: commit summaries
@@ -23,7 +23,7 @@ Imperative:
 - Drop the stale index
 - Vacuum the journal
 - Silence the sandbox warning
-- Rebuild — one word, and that word is a verb
+- Rebuild: one word, and that word is a verb
 - Revert "Shorten the debounce"
 - Say what the refusal means
 - Pace the retries against the quota
@@ -37,14 +37,14 @@ an object, a clause, a phrase, a second clause, a comma and a participle,
 does not change it. A long summary is no less imperative than a short one.
 
 Not imperative, one violation each:
-- Widened the retry window — past tense
-- Widens the retry window — third person
-- Widening the retry window — gerund
-- Retry window support — noun phrase, no verb
-- Index rebuilt — past participle
-- Parser must handle tags — describes, does not instruct
+- Widened the retry window: past tense
+- Widens the retry window: third person
+- Widening the retry window: gerund
+- Retry window support: noun phrase, no verb
+- Index rebuilt: past participle
+- Parser must handle tags: describes, does not instruct
 
-Report the grade named:
+Report one of these grades:
 - warn: the summary names its verb in the wrong form. Past tense, third
 person, gerund, participle, infinitive, passive, first person, "should": a
 reader recovers the instruction by conjugating it.
@@ -52,11 +52,12 @@ reader recovers the instruction by conjugating it.
 question, a marker with a noun behind it: nothing in it says what to do to
 the code.
 
-A summary opening with a word that is both noun and verb is the verb. In a
-revert, judge "Revert" alone; the quoted summary is not yours. Quote each
+When a summary opens with a word that is both a noun and a verb, read
+the word as the verb. In a
+revert, judge "Revert" alone; do not judge the quoted summary. Quote each
 summary that is not imperative, copied exactly.
 
-Ambiguous complies, and that rule binds your reasoning: if your
+An ambiguous summary complies, and that rule binds your reasoning: if your
 explanation needs "if interpreted as", "however", "could be read as" or
 "arguably", the summary complies and you report nothing for it. Report a
 violation only for a summary whose mood is plainly not imperative.
