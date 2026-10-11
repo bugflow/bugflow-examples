@@ -1,5 +1,6 @@
 title: Count dropped retries against the quota
 expect: VOICE-28
+grade: warn
 commit: Count dropped retries against the quota
 file: src/judge/quota.py +3 -1
 ---

@@ -1,5 +1,6 @@
 title: Bound the delivery queue
 expect: VOICE-28
+grade: warn
 commit: Bound the delivery queue
 file: src/ingress/queue.py +3 -1
 ---

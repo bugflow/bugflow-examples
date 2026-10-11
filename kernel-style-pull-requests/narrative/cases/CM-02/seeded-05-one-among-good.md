@@ -1,5 +1,6 @@
 title: Run the parser's tests on empty input
 expect: VOICE-28
+grade: warn
 commit: Add an empty fixture
 commit: Fix tests the new parser breaks on empty input
 commit: Document the fixture

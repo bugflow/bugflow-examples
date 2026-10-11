@@ -1,5 +1,6 @@
 title: Read the stale records from the journal
 expect: VOICE-28
+grade: warn
 commit: Read the stale records from the journal
 file: src/journal/reader.py +4 -0
 ---
