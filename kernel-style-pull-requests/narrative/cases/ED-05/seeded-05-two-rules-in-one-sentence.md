@@ -1,7 +1,7 @@
 title: Reword the useful description policy's summary
 expect: VOICE-29
 grade: warn
-why: the owner replaced this sentence on 2026-10-12. Two rules in one sentence, a figure of speech for the verb, and a tail that names no object.
+why: two rules in one sentence, a figure of speech for the verb, and a tail that names no object.
 commit: Reword the useful description policy's summary
 file: narrative/policies/ED-02-useful-description.md +1 -1
 ---

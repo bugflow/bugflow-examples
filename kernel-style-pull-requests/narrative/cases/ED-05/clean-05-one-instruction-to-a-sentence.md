@@ -1,6 +1,6 @@
 title: Reword the useful description policy's summary
 expect:
-why: the owner's wording, given on 2026-10-12 in place of the sentence in seeded-05.
+why: each sentence gives one instruction, with a literal verb and a named object.
 commit: Reword the useful description policy's summary
 file: narrative/policies/ED-02-useful-description.md +1 -1
 ---
