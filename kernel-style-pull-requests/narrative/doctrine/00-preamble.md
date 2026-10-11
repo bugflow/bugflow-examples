@@ -16,5 +16,5 @@ was retired when VOICE-8 absorbed it.
 A policy's header lists the clauses it judges. A clause no policy lists
 is guidance, and no finding is raised under it.
 
-A repository is reviewed against the policies `declarations.toml` lists
-for it, and no others.
+A repository is reviewed only against the policies that `declarations.toml`
+lists for it.
