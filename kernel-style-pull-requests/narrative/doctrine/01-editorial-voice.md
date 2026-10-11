@@ -153,3 +153,12 @@ before, which of two options was rejected and why, a measurement that only
 means something beside another one. "Nine of ten cases pass, not the eleven
 claimed" loses a number when struck. "A command, not only a test" loses
 nothing.
+
+**VOICE-28. Garden paths.** A sentence the reader must parse twice. "Correct
+references the doctrine cannot resolve" reads first as "correct references",
+then as "references the doctrine", and only then as intended. Give the noun
+its article and put its modifiers before it: "Correct the unresolvable
+doctrine references". If a clause must follow the noun, keep its "that".
+
+The test is the opening words. If they form a phrase the sentence does not
+mean, rewrite it.
