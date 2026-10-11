@@ -4,7 +4,8 @@ summary: Every comment and docstring a change adds parses on the first reading
 model_class: medium
 evidence: patches
 quotable_name: patches
-graded: no
+graded: yes
+ceiling: warn
 quotes_code: yes
 clause: VOICE-28 garden paths
 ---
@@ -42,9 +43,8 @@ that reason. An article after the verb settles the reading, and so does a
 "that" before the clause, or a comma after an opening clause.
 
 Report a violation only when you can name the wrong phrase a reader forms
-first, in words copied from the sentence. Ambiguous complies, and that
-binds your reasoning: if your explanation needs "could be read as" or
-"arguably", nothing is reported. A long sentence is not a garden path, and
+first, in words copied from the sentence. If you cannot name it, the
+sentence complies. A long sentence is not a garden path, and
 neither is a comment that is only a fragment.
 
 When a file's patch is omitted or cut to its hunk headers, report nothing
@@ -54,10 +54,18 @@ Quote the sentence, copied exactly from an added line, without the comment
 marker. A quote that is not in a patch is discarded. Report each sentence
 once, and at most five in all.
 
+Report the grade named:
+- warn: the reader forms the wrong phrase and recovers. The rest of the
+sentence leaves one reading, and a second pass reaches it.
+- fail: the sentence has two complete readings and nothing in it says
+which is meant. "Check records match the journal" is an instruction to
+check that the records match, and it is a statement about check records.
+A reader may act on the wrong one.
+
 One sentence per violation, naming the phrase a reader forms first. No
 violations when every added sentence parses on the first reading.
 === calibration
-- 2026-10-12: written, with three seeded and four clean cases. Not
+- 2026-10-12: written, with four seeded and four clean cases. Not
 measured.
 
 Known weakness: not known. It is the second policy that is shown every

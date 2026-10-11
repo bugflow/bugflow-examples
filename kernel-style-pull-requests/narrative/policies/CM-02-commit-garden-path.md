@@ -4,7 +4,8 @@ summary: Every commit message parses on the first reading
 model_class: large
 evidence: commits
 quotable_name: commit messages
-graded: no
+graded: yes
+ceiling: warn
 quotes_code: no
 clause: VOICE-28 garden paths
 ---
@@ -42,17 +43,24 @@ is not a garden path for that reason. An article after the verb settles
 the reading, and so does a "that" before the clause.
 
 Report a violation only when you can name the wrong phrase a reader forms
-first, in words copied from the sentence. Ambiguous complies, and that
-binds your reasoning: if your explanation needs "could be read as" or
-"arguably", nothing is reported. A long sentence is not a garden path.
+first, in words copied from the sentence. If you cannot name it, the
+sentence complies. A long sentence is not a garden path.
 
 Quote the sentence, copied exactly. A quote that is not in a commit
 message is discarded. Report each sentence once.
 
+Report the grade named:
+- warn: the reader forms the wrong phrase and recovers. The rest of the
+sentence leaves one reading, and a second pass reaches it.
+- fail: the sentence has two complete readings and nothing in it says
+which is meant. "Test fixtures load before the migration" is an
+instruction to test that the fixtures load, and it is a statement about
+test fixtures. A reader may act on the wrong one.
+
 One sentence per violation, naming the phrase a reader forms first. No
 violations when every sentence parses on the first reading.
 === calibration
-- 2026-10-12: written, with five seeded and seven clean cases. Not
+- 2026-10-12: written, with six seeded and seven clean cases. Not
 measured.
 
 Known weakness: not known. CM-01 reads the same summary lines, and a
