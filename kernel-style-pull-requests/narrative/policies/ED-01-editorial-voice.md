@@ -1,6 +1,6 @@
 policy_id: ED-01
 subject: description
-summary: The title and description read as an engineer wrote them
+summary: The title and description are plain and factual
 model_class: medium
 evidence: description
 quotable_name: title or description
@@ -9,7 +9,7 @@ quotes_code: no
 clause: VOICE-6 marketing register
 clause: VOICE-7 self-congratulation
 clause: VOICE-9 filler openers
-clause: VOICE-10 hedging and throat-clearing
+clause: VOICE-10 hedging
 clause: VOICE-11 rhetorical questions
 clause: VOICE-12 emphasis inflation
 clause: VOICE-13 fake precision
@@ -22,11 +22,11 @@ clause: VOICE-28 garden paths
 You assess the editorial voice of one pull request's title and description
 against the doctrine of record above.
 
-Judge only these clauses, from section 2.1, "What not to write":
+Judge only these clauses, from the section "What not to write":
 - VOICE-6: marketing register
 - VOICE-7: self-congratulation
 - VOICE-9: filler openers
-- VOICE-10: hedging and throat-clearing
+- VOICE-10: hedging
 - VOICE-11: rhetorical questions
 - VOICE-12: emphasis inflation
 - VOICE-13: fake precision
@@ -53,7 +53,7 @@ either. "Untestably small" and "rate limited" say what they mean, where
 emphasis.
 - A pull request or issue number such as #28 is a link on the forge, not
 an unresolved reference, and neither is a sentence made of one: "Stacked
-on #59." and "Follows #76." resolve by being clicked.
+on #59." and "Follows #76." are links.
 - A filler opener (VOICE-9) is a word or phrase that can be deleted from
 the start of a sentence without losing meaning, such as "Basically,".
 Words that name the change, such as "This adds", are not filler.
@@ -63,10 +63,10 @@ marketing register (VOICE-6), not padding.
 - Anthropomorphism (VOICE-14) is giving software wants, feelings or
 beliefs. Saying what software does or did is not anthropomorphism.
 - Narrating yourself (VOICE-19) is telling how the author arrived at the
-change. It takes two shapes. The first undoes itself: an attempt
+change. It takes two shapes. The first is a step the author reversed: an attempt
 abandoned, a false start, a draft rewritten, an apology, "as requested".
-"I tried X and dropped it." "An earlier draft did Y." The second undoes
-nothing and is true, and its subject is the occasion the author was busy
+"I tried X and dropped it." "An earlier draft did Y." The second is true and
+reverses nothing, and its subject is the occasion the author was busy
 with rather than the change: "found while verifying X", "the X work turned
 up", "came up during Y", and a title naming what the author noticed
 instead of what the change does. Where the occasion matters to a reviewer,
@@ -84,7 +84,7 @@ of it: the subject is the change and the system, not an occasion the
 author was busy with. Report only a passage that would still make sense
 beginning "on the way here, I".
 - Fake precision (VOICE-13) is a figure stated more exactly than it was
-known: a percentage nobody counted, a duration nobody timed. A number the
+known: a percentage nobody counted, a duration nobody timed. A number that the
 description says was measured, such as a count of tests that passed, is
 not fake precision. Neither is a figure the author marks as approximate.
 "~30", "roughly $0.004", "about four minutes" claim only what they claim,
@@ -101,17 +101,16 @@ neither is a clause that keeps its "that".
 - Report each passage once, under the clause it breaks most plainly.
 
 The intent: a reviewer reads the title and description to learn what
-changed and why, and takes the author at their word. Report the grade
-named:
-- fail: prose the reviewer cannot take at its word. A quality claimed and
+changed and why, and takes the author at their word. Report one of these grades:
+- fail: prose that the reviewer cannot take at its word. A quality claimed and
 not shown (VOICE-6, VOICE-7), a figure nobody measured (VOICE-13), a
 reference to nothing they can find (VOICE-15). Trusting it misleads them.
-- warn: prose that costs the reviewer words and nothing else. Filler,
+- warn: prose that costs the reviewer words and does not mislead them. Filler,
 hedging, a rhetorical question, inflated emphasis, padding, software given
 feelings, the author's route to the change (VOICE-9, VOICE-10, VOICE-11,
 VOICE-12, VOICE-14, VOICE-16, VOICE-19). Delete it and the description
 says what it said. A garden path (VOICE-28) is a warning too: the reviewer
-reads the sentence twice and loses nothing else.
+reads the sentence twice and is not misled.
 
 Write each explanation in one sentence, engineer to engineer. Return no
 violations when the title and description comply.
