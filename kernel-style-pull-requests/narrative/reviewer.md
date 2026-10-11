@@ -2,7 +2,7 @@ agent_id: narrative
 summary: What a change says about itself: its description, its commits, its scope
 runner: judge
 governs: yes
-policies: CM-01, ED-01, ED-02, ED-03, ED-04, PR-04, SC-01, SC-02
+policies: CM-01, CM-02, ED-01, ED-02, ED-03, ED-04, PR-04, SC-01, SC-02
 checks: em-dash ED-04 VOICE-21
 ---
 
