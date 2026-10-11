@@ -1,0 +1,17 @@
+# Which review processes run, and when.
+#
+# A process is declared once and held by a layer that names it. A layer's
+# cadence is "event" for work that starts when a pull request changes, or
+# a clock cadence such as "weekly".
+#
+# The weekly layer holds one process. Once a week the worker starts the
+# security reviewer through its runner, and the reviewer reads everything
+# merged into a repository since the layer last ran.
+
+[process.security-stocktake]
+subject = "range"
+reviewer = "security"
+
+[layer.weekly]
+cadence = "weekly"
+processes = ["security-stocktake"]
