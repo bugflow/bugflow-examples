@@ -1,5 +1,5 @@
 title: Add the poller service
-expect: VOICE-2
+expect: VOICE-2 | VOICE-3
 grade: fail
 commit: Add the poller service
 file: src/bugflow/app/poller.py +120 -0

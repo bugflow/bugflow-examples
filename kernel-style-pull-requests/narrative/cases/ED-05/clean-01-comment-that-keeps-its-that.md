@@ -8,7 +8,7 @@ A retry the judge drops now counts against the quota.
 @@ -41,5 +41,7 @@ class Quota:
      def spend(self, call: Call) -> None:
 -        if call.reached_model:
-+        # The retries that the judge drops count against the quota.
++        # A retry that the judge drops still counts against the quota.
 +        if call.reached_model or call.dropped:
 +            self._calls += 1
              self._used += call.cost

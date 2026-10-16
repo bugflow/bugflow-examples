@@ -1,5 +1,5 @@
 title: Sign the poller's deliveries
-expect: VOICE-2
+expect: VOICE-2 | VOICE-3
 grade: warn
 commit: Sign the poller's deliveries
 file: src/bugflow/adapters/webhook_sink.py +14 -2

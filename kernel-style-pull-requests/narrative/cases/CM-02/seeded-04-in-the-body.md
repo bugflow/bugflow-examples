@@ -1,9 +1,9 @@
-title: Count dropped retries against the quota
+title: Bound the delivery queue
 expect: VOICE-28
 grade: warn
-commit: Count dropped retries against the quota
+commit: Bound the delivery queue
 |
-| Retries the judge drops count against the quota. Only a retry that
-| reached the model was counted before.
+| While the worker polls the queue fills. The queue now holds at most
+| 500 deliveries.
 ---
-A run of timeouts spent nothing and was never stopped.
+The ingress answers 503 when the queue is full.

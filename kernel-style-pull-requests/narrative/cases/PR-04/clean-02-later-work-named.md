@@ -2,6 +2,7 @@ title: Record dismissals as journal facts
 expect: 
 commit: Record a dismiss comment as a journal fact
 file: src/bugflow/domain/journal.py +1 -0
+file: src/bugflow/domain/dismissal.py +14 -0
 file: src/bugflow/usecases/receive_delivery.py +14 -0
 ---
 A comment whose first line is /dismiss, a policy id and a reason is recorded
@@ -35,3 +36,19 @@ count for the label; that follows in its own pull request.
 +                )
 +            )
          self._journal.append(entries)
+=== patch src/bugflow/domain/dismissal.py
+@@ -0,0 +1,14 @@
++from dataclasses import dataclass
++
++
++@dataclass(frozen=True)
++class Dismissal:
++    policy_id: str
++    reason: str
++
++
++def parse_dismissal(body: str) -> Dismissal | None:
++    first = body.splitlines()[0].split(maxsplit=2) if body else []
++    if len(first) < 3 or first[0] != "/dismiss":
++        return None
++    return Dismissal(policy_id=first[1], reason=first[2])

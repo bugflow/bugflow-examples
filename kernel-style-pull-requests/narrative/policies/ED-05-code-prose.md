@@ -41,7 +41,7 @@ records".
 queue".
 
 Not garden paths:
-- The retries that the judge drops count against the quota.
+- A retry that the judge drops still counts against the quota.
 - Return the records that the journal marks stale.
 - While the worker polls, the queue fills.
 - Skip a delivery the ingress has already stored.
