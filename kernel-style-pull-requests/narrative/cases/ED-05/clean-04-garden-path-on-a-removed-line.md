@@ -7,5 +7,5 @@ The comment read as "retries the judge" before it read as intended.
 === patch src/judge/quota.py
 @@ -42,3 +42,3 @@ class Quota:
 -        # Retries the judge drops count against the quota.
-+        # The retries that the judge drops count against the quota.
++        # A retry that the judge drops still counts against the quota.
          if call.reached_model or call.dropped:

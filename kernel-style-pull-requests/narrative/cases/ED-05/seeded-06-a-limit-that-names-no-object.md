@@ -1,5 +1,5 @@
 title: Say what the description match policy checks
-expect: VOICE-29
+expect: VOICE-28 | VOICE-29
 grade: warn
 commit: Say what the description match policy checks
 file: narrative/policies/PR-04-description-match.md +1 -1
