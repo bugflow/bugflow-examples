@@ -12,3 +12,8 @@ repositories in `declarations.toml`, and send it to your server:
 Add `--check` to have the server report every problem and store nothing.
 The Bugflow repository's `docs/deploying.md` says how a pipeline does
 this on each merge.
+
+## Licence
+
+This repository is free software under the GNU General Public License,
+version 3 or any later version. The text is in `COPYING`.
